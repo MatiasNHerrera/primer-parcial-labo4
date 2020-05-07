@@ -11,6 +11,15 @@ import { DetalleProductoComponent } from './componentes/detalle-producto/detalle
 import { CrearProductoComponent } from './componentes/crear-producto/crear-producto.component';
 import { ListadoVentasComponent } from './componentes/listado-ventas/listado-ventas.component';
 import { CrearVentaComponent } from './componentes/crear-venta/crear-venta.component';
+import { BienvenidoComponent } from './components/bienvenido/bienvenido.component';
+import { BusquedaComponent } from './components/busqueda/busqueda.component';
+import { PeliculasAltaComponent } from './components/peliculas-alta/peliculas-alta.component';
+import { ActorAltaComponent } from './components/actor-alta/actor-alta.component';
+import { ActorListadoComponent } from './components/actor-listado/actor-listado.component';
+import { PeliculasListadoComponent } from './components/peliculas-listado/peliculas-listado.component';
+import { PaisesListadoComponent } from './components/paises-listado/paises-listado.component';
+import { TablaPaisesComponent } from './components/tabla-paises/tabla-paises.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,13 +30,22 @@ import { CrearVentaComponent } from './componentes/crear-venta/crear-venta.compo
     DetalleProductoComponent,
     CrearProductoComponent,
     ListadoVentasComponent,
-    CrearVentaComponent
+    CrearVentaComponent,
+    BienvenidoComponent,
+    BusquedaComponent,
+    PeliculasAltaComponent,
+    ActorAltaComponent,
+    ActorListadoComponent,
+    PeliculasListadoComponent,
+    PaisesListadoComponent,
+    TablaPaisesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
