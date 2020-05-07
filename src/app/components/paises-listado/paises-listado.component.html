@@ -1,3 +1,6 @@
 <div class="listadoPaises">
-    <app-tabla-paises></app-tabla-paises>
+    <app-tabla-paises (detallePais)="setDetalle($event)"></app-tabla-paises>
+</div>
+<div class="detalle">
+    <app-detalle-pais [paisDetalle]="paisParaDetalle"></app-detalle-pais>
 </div>

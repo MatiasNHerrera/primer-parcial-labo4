@@ -20,6 +20,7 @@ import { PeliculasListadoComponent } from './components/peliculas-listado/pelicu
 import { PaisesListadoComponent } from './components/paises-listado/paises-listado.component';
 import { TablaPaisesComponent } from './components/tabla-paises/tabla-paises.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DetallePaisComponent } from './components/detalle-pais/detalle-pais.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { HttpClientModule } from '@angular/common/http';
     ActorListadoComponent,
     PeliculasListadoComponent,
     PaisesListadoComponent,
-    TablaPaisesComponent
+    TablaPaisesComponent,
+    DetallePaisComponent
   ],
   imports: [
     BrowserModule,

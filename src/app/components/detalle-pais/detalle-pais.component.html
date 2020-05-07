@@ -1,0 +1,10 @@
+<div class="container">
+    <div *ngIf="!paisDetalle; else detalles"><h1 class="busqueda">Seleccione un pais</h1></div>
+    <ng-template #detalles style="display: block;">
+        <button (click)="desahabilitar()">Deshabilitar</button>
+        <p>{{paisDetalle.name}}</p>
+        <p>{{paisDetalle.capital}}</p>
+        <p>{{paisDetalle.population}}</p>
+        <img src="{{paisDetalle.flag}}" width="40%" alt="">
+    </ng-template>
+</div>

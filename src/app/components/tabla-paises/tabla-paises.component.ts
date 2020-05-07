@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { MiServicioService } from 'src/app/servicios/mi-servicio.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { MiServicioService } from 'src/app/servicios/mi-servicio.service';
 })
 export class TablaPaisesComponent implements OnInit {
 
+  @Output() detallePais : EventEmitter<any> = new EventEmitter<any>();
   listadoPaises;
 
   constructor( private service : MiServicioService) { }
@@ -17,6 +18,11 @@ export class TablaPaisesComponent implements OnInit {
       this.listadoPaises = paises;
       console.log(this.listadoPaises);
     });
+  }
+
+  detalle(pais)
+  {
+    this.detallePais.emit(pais);
   }
 
 }

@@ -8,11 +8,17 @@ import { MiServicioService } from 'src/app/servicios/mi-servicio.service';
 })
 export class PaisesListadoComponent implements OnInit {
 
+  paisParaDetalle;
   listadoPaises;
   constructor(private service : MiServicioService) { }
 
   ngOnInit(): void {
   
+  }
+
+  setDetalle(pais)
+  {
+    this.paisParaDetalle = pais;
   }
 
 }
