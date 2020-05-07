@@ -1,0 +1,20 @@
+<div class="container">
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Descripcion</th>
+            <th>Tipo</th>
+            <th>Fecha de vencimiento</th>
+            <th>Precio</th>
+        </tr>
+        <tr *ngFor="let entidad of this.listadoEntidad">
+            <td>{{entidad.id}}</td>
+            <td>{{entidad.descripcion}}</td>
+            <td>{{entidad.tipo}}</td>
+            <td>{{entidad.fechaDeVencimiento}}</td>
+            <td>{{entidad.precio}}</td>
+            <td><img src={{entidad.rutaDeFoto}} width="50px"></td>
+            <input type="button" (click)="borrarProducto(entidad)" value="Borrar">
+        </tr>
+    </table>
+</div>

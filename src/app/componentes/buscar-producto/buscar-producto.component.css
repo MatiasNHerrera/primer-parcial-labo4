@@ -1,0 +1,55 @@
+*
+{
+    color: ghostwhite
+}
+
+.container
+{
+    position: absolute;
+    top: 28.5%;
+    left: 77%;
+    transform: translate(-50%,-50%);
+    width: 30%;
+    height: 17%;
+    background: rgba(73, 73, 73, 0.5);
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 5px;
+}
+
+input[type=text]
+{
+    display: block;
+    width: 50%;
+    height: 20%;
+    margin: 7% auto;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1em;
+    color: black;
+}
+
+
+button
+{
+    width: 20%;
+    height: 25%;
+    background: rgb(3, 216, 198);
+    border: none;
+    cursor: pointer;
+    transition: 0.1s;
+    outline: none;
+}
+
+button:hover
+{
+    background: none;
+    border-top: 2px solid rgb(3, 216, 198);
+    border-bottom: 2px solid rgb(3, 216, 198);
+}
+
+::placeholder
+{
+    color: black;
+}

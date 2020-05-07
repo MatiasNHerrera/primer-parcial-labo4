@@ -1,0 +1,11 @@
+<div class="container">
+    <div *ngIf="!productoDetalle; else detalles"><h1 class="busqueda">Realice una busqueda</h1></div>
+    <ng-template #detalles style="display: block;">
+        <button (click)="limpiar()">Limpiar</button>
+        <p>{{productoDetalle.descripcion}}</p>
+        <p>{{productoDetalle.tipo}}</p>
+        <p>{{productoDetalle.fechaDeVencimiento}}</p>
+        <p>{{productoDetalle.precio}}</p>
+        <img src="../../../assets/imagenes/{{productoDetalle.rutaDeFoto}}" width="40%" alt="">
+    </ng-template>
+</div>

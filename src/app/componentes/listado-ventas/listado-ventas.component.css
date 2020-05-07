@@ -1,0 +1,38 @@
+*
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: ghostwhite;
+    box-sizing: border-box;
+}
+
+table
+{
+    position: absolute;
+    top: 20%;
+    left: 3%;
+    background: rgba(73, 73, 73, 0.5);
+    width: 50%;
+    text-align: center;
+    border-radius: 5px;
+    border-width: 10px;
+    border: black;
+}
+
+
+input[type=button]
+{  
+    background: rgb(3, 216, 198);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 3.5vh;
+    transition: 0.2s;
+    outline: none;
+}
+
+input[type=button]:hover
+{
+    background: none;
+    border-top: 2px solid rgb(3, 216, 198);
+    border-bottom: 2px solid rgb(3, 216, 198);
+}

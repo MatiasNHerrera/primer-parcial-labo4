@@ -1,0 +1,12 @@
+<div class="container">
+    <div *ngIf="!venta; else alta" class="button"><button (click)="nuevo()">CREAR NUEVA</button></div>
+    <ng-template #alta>
+        <form class="alta">
+            <input type="text" placeholder="Descripción" name="descripcion" [(ngModel)]="this.venta.descripcion" required>
+            <input type="text" placeholder="Precio" name="precio" [(ngModel)]="this.venta.precio"required>
+            <input type="text" placeholder="Fecha de venta" name="fechaVenta" [(ngModel)]="this.venta.fechaVenta"required>
+            <input type="text" placeholder="Cantidad" name="cantidad" [(ngModel)]="this.venta.cantidad"required>
+            <input type="submit" class="crear" (click)="crearVenta()" value="CREAR VENTA">
+        </form>  
+    </ng-template>
+</div>

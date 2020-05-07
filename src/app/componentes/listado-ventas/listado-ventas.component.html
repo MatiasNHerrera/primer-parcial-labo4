@@ -1,0 +1,17 @@
+<div class="container">
+    <table>
+        <tr>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Fecha Venta</th>
+            <th>Cantidad</th>
+        </tr>
+        <tr *ngFor="let venta of this.listadoVenta">
+            <td>{{venta.descripcion}}</td>
+            <td>{{venta.precio}}</td>
+            <td>{{venta.fechaVenta}}</td>
+            <td>{{venta.cantidad}}</td>
+            <input type="button" (click)="borrarVenta(venta)" value="Borrar">
+        </tr>
+    </table>
+</div>

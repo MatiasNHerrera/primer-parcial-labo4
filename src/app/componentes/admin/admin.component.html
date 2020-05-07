@@ -1,0 +1,28 @@
+<div class="container">
+    <nav>
+        <ul>
+            <li><a (click)="cambiarVista('productos')">Productos</a></li>
+            <li><a (click)="cambiarVista('ventas')">Ventas</a></li>
+        </ul>
+    </nav>
+    <div class="listado" *ngIf="queMostrar=='productos'">
+        <h1>Listado Productos</h1>
+        <app-listado [listadoEntidad]="listadoEntidad" (borrarProd)="eliminarProducto($event)"></app-listado>
+    </div>
+    <div class="buscar" *ngIf="queMostrar=='productos'">
+        <app-buscar-producto (elementoBuscado)="mostrarDetalles($event)" [listadoProductos] = "listadoEntidad"></app-buscar-producto>
+    </div>
+    <div class="detalle" *ngIf="queMostrar=='productos'">
+        <app-detalle-producto [productoDetalle]="productoParaMostrar"></app-detalle-producto>
+    </div>
+    <div class="altaProducto" *ngIf="queMostrar=='productos'">
+        <app-crear-producto (productoCreado)="crearProducto($event)"></app-crear-producto>
+    </div>
+
+    <div class="listadoVenta" *ngIf="queMostrar=='ventas'">
+        <app-listado-ventas [listadoVenta]="listadoVenta" (ventaParaBorrar)="borrarVenta($event)"></app-listado-ventas>
+    </div>
+    <div class="crearVenta" *ngIf="queMostrar=='ventas'">
+        <app-crear-venta (ventaCreada)="crearVenta($event)"></app-crear-venta>
+    </div>
+</div>
