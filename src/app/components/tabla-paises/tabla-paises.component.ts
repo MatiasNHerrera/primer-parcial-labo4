@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { MiServicioService } from 'src/app/servicios/mi-servicio.service';
 
 @Component({
@@ -9,15 +9,12 @@ import { MiServicioService } from 'src/app/servicios/mi-servicio.service';
 export class TablaPaisesComponent implements OnInit {
 
   @Output() detallePais : EventEmitter<any> = new EventEmitter<any>();
-  listadoPaises;
+  @Input() listadoPaises;
 
-  constructor( private service : MiServicioService) { }
+  constructor( private service : MiServicioService) { 
+  }
 
   ngOnInit(): void {
-    this.service.getPaises().subscribe((paises) => {
-      this.listadoPaises = paises;
-      console.log(this.listadoPaises);
-    });
   }
 
   detalle(pais)

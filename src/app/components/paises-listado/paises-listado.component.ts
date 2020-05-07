@@ -9,8 +9,13 @@ import { MiServicioService } from 'src/app/servicios/mi-servicio.service';
 export class PaisesListadoComponent implements OnInit {
 
   paisParaDetalle;
-  listadoPaises;
-  constructor(private service : MiServicioService) { }
+  listadoPaises : any[];
+  constructor(private service : MiServicioService) {
+    setTimeout(() => {
+      this.listadoPaises = this.service.getPaises();
+      console.log(this.listadoPaises);
+    },1000)
+   }
 
   ngOnInit(): void {
   
@@ -19,6 +24,13 @@ export class PaisesListadoComponent implements OnInit {
   setDetalle(pais)
   {
     this.paisParaDetalle = pais;
+  }
+
+  deshabilitarPais(pais)
+  {
+    let i = this.listadoPaises.indexOf(pais);
+    this.listadoPaises.splice(i, 1);
+    this.service.setPaises(this.listadoPaises);
   }
 
 }

@@ -6,10 +6,22 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MiServicioService {
 
-  constructor(private http : HttpClient) { }
+  paises;
+  constructor(private http : HttpClient) 
+  {
+    this.http.get("https://restcountries.eu/rest/v2/region/americas").subscribe((datos) => {
+      this.paises = datos;
+      console.log(datos);
+    })
+  }
 
   getPaises()
   {
-    return this.http.get("https://restcountries.eu/rest/v2/region/americas");
+    return this.paises;
+  }
+
+  setPaises(paises)
+  {
+    this.paises = paises;
   }
 }

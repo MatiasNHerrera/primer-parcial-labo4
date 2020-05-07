@@ -1,6 +1,6 @@
 <div class="listadoPaises">
-    <app-tabla-paises (detallePais)="setDetalle($event)"></app-tabla-paises>
+    <app-tabla-paises (detallePais)="setDetalle($event)" [listadoPaises]="listadoPaises"></app-tabla-paises>
 </div>
 <div class="detalle">
-    <app-detalle-pais [paisDetalle]="paisParaDetalle"></app-detalle-pais>
+    <app-detalle-pais [paisDetalle]="paisParaDetalle" (paisDeshabilitar)="deshabilitarPais($event)"></app-detalle-pais>
 </div>
