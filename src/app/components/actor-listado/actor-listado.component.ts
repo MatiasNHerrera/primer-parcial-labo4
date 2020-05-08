@@ -9,6 +9,7 @@ import { Actor } from 'src/app/clases/actor';
 })
 export class ActorListadoComponent implements OnInit {
 
+  paisParaDetalle
   actorParaDetalle : Actor;
   listadoActores;
   constructor(private servicio : MiServicioService) { }
@@ -21,6 +22,7 @@ export class ActorListadoComponent implements OnInit {
   setDetalle(detalle : Actor)
   {
     this.actorParaDetalle = detalle;
+    this.paisParaDetalle = this.actorParaDetalle.paisOrigen;
     console.log(detalle);
   }
 

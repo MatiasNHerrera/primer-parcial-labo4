@@ -6,7 +6,7 @@
             <input type="text" placeholder="Ingrese apellido" name="tipo" [(ngModel)]="this.actor.apellido"required>
             <input type="text" placeholder="Ingrese sexo" name="estreno" [(ngModel)]="this.actor.sexo"required>
             <input type="text" placeholder="Ingrese nacimiento" name="fechaNacimiento" [(ngModel)]="this.actor.fechaNacimiento"required>
-            <input type="text" placeholder="Ingrese nacionalidad" name="paisActor" [(ngModel)]="this.actor.paisOrigen"required>
+            <input type="text" placeholder="Ingrese nacionalidad" name="paisActor" [(ngModel)]="this.actor.paisOrigen.name"required>
 
             <input type="submit" class="crear" (click)="crearActor()" value="CREAR PELICULA">
         </form>  

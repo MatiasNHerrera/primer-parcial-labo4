@@ -9,7 +9,11 @@ export class DetallePaisComponent implements OnInit {
 
   @Output() paisDeshabilitar : EventEmitter<any> = new EventEmitter<any>();
   @Input() paisDetalle;
-  constructor() { }
+  constructor() {
+    setTimeout(() => {
+
+    },2000);
+   }
 
   ngOnInit(): void {
   }
