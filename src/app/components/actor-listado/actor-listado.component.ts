@@ -9,7 +9,7 @@ import { Actor } from 'src/app/clases/actor';
 })
 export class ActorListadoComponent implements OnInit {
 
-  actorParaDetalle;
+  actorParaDetalle : Actor;
   listadoActores;
   constructor(private servicio : MiServicioService) { }
 
@@ -18,9 +18,10 @@ export class ActorListadoComponent implements OnInit {
   }
 
 
-  setDetalle(detalle)
+  setDetalle(detalle : Actor)
   {
     this.actorParaDetalle = detalle;
+    console.log(detalle);
   }
 
 }

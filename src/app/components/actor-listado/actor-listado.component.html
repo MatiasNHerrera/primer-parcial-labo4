@@ -1,6 +1,6 @@
 <div class="actorListado">
-    <app-tabla-actor [listadoActores]="this.listadoActores"></app-tabla-actor>
+    <app-tabla-actor [listadoActores]="this.listadoActores" (actorDetalle)="setDetalle($event)"></app-tabla-actor>
 </div>
 <div>
-    <app-detalle-actor [actorDetalle]="actorParaDetalle" (actorDetalle)="setDetalle($event)"></app-detalle-actor>
+    <app-detalle-actor [actorDetalle]="this.actorParaDetalle"></app-detalle-actor>
 </div>

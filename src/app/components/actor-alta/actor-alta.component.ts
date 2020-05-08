@@ -37,7 +37,6 @@ export class ActorAltaComponent implements OnInit {
   setActor(pais)
   {
     this.actor.paisOrigen = pais.name;
-
   }
 
   setDetalle(pais)

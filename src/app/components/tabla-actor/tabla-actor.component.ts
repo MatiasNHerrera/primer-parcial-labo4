@@ -15,7 +15,7 @@ export class TablaActorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  detalle(entidad)
+  detalle(entidad : Actor)
   {
     this.actorDetalle.emit(entidad);
   }
