@@ -1,4 +1,4 @@
-class Actor
+export class Actor
 {
     id : number
     nombre : string 

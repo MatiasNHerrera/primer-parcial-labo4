@@ -1,1 +1,6 @@
-<p>actor-listado works!</p>
+<div class="actorListado">
+    <app-tabla-actor [listadoActores]="this.listadoActores"></app-tabla-actor>
+</div>
+<div>
+    <app-detalle-actor [actorParaDetalle]="actorDetalle" (actorDetalle)="setDetalle($event)"></app-detalle-actor>
+</div>

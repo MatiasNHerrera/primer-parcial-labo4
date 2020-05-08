@@ -8,6 +8,7 @@ import { MiServicioService } from 'src/app/servicios/mi-servicio.service';
 })
 export class TablaPaisesComponent implements OnInit {
 
+  @Output() paisActor : EventEmitter<any> = new EventEmitter<any>();
   @Output() detallePais : EventEmitter<any> = new EventEmitter<any>();
   @Input() listadoPaises;
 
@@ -20,6 +21,11 @@ export class TablaPaisesComponent implements OnInit {
   detalle(pais)
   {
     this.detallePais.emit(pais);
+  }
+
+  seleccionar(entidad)
+  {
+    this.paisActor.emit(entidad);
   }
 
 }

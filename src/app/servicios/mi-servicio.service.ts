@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Actor } from '../clases/actor';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MiServicioService {
 
+  listadoActores : Actor[] = [];
   paises;
   constructor(private http : HttpClient) 
   {
@@ -23,5 +25,15 @@ export class MiServicioService {
   setPaises(paises)
   {
     this.paises = paises;
+  }
+
+  getActores()
+  {
+    return this.listadoActores;
+  }
+
+  setActores(actor)
+  {
+    this.listadoActores.push(actor);
   }
 }

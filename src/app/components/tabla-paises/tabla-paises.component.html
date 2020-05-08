@@ -11,7 +11,7 @@
         <td>{{entidad.capital}}</td>
         <td>{{entidad.population}}</td>
         <td><img src={{entidad.flag}} width="50px"></td>
-        <input type="button" value="Borrar">
+        <input type="button" value="seleccionar" (click)="seleccionar(entidad)">
         <input type="button" value="Detalle" (click)="detalle(entidad)">
     </tr>
 </table>

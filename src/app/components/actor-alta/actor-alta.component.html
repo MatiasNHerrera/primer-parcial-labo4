@@ -1,3 +1,20 @@
+<div class="container">
+    <div *ngIf="!actor; else alta" class="button" (click)="nuevo()"><button>CREAR NUEVO</button></div>
+    <ng-template #alta>
+        <form class="alta">
+            <input type="text" placeholder="Ingrese nombre" name="nombre" [(ngModel)]="this.actor.nombre" required>
+            <input type="text" placeholder="Ingrese apellido" name="tipo" [(ngModel)]="this.actor.apellido"required>
+            <input type="text" placeholder="Ingrese sexo" name="estreno" [(ngModel)]="this.actor.sexo"required>
+            <input type="text" placeholder="Ingrese nacimiento" name="fechaNacimiento" [(ngModel)]="this.actor.fechaNacimiento"required>
+            <input type="text" placeholder="Ingrese nacionalidad" name="paisActor" [(ngModel)]="this.actor.paisOrigen"required>
+
+            <input type="submit" class="crear" (click)="crearActor()" value="CREAR PELICULA">
+        </form>  
+    </ng-template>
+</div>
 <div class="listadoPaises">
-    <app-tabla-paises></app-tabla-paises>
+    <app-tabla-paises [listadoPaises]="listadoPaises" (paisActor)="setActor($event)" (detallePais)="setDetalle($event)"></app-tabla-paises>
+</div>
+<div class="detallePais">
+    <app-detalle-pais [paisDetalle]="paisParaDetalle"></app-detalle-pais>
 </div>

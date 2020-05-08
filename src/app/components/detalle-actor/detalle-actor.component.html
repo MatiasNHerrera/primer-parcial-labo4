@@ -1,0 +1,9 @@
+<div class="container">
+    <div *ngIf="!actorDetalle; else detalles"><h1 class="busqueda">Seleccione un actor</h1></div>
+    <ng-template #detalles style="display: block;">
+        <p>{{actorDetalle.nombre}}</p>
+        <p>{{actorDetalle.apellido}}</p>
+        <p>{{actorDetalle.paisOrigen}}</p>
+        <img src="../../../assets/imagenes/defectoActor.png" width="40%" alt="">
+    </ng-template>
+</div>
