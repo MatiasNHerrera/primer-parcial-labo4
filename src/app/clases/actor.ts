@@ -6,6 +6,6 @@ export class Actor
     sexo : string
     fechaNacimiento : string
     foto : string
-    paisOrigen : string
+    paisOrigen;
 
 }
